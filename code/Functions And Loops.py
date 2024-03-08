@@ -31,3 +31,7 @@ def convert_far_to_cel(temp_far):
 
 print(convert_far_to_cel(20))
 
+
+for n in range(2, 10):
+    print(f"{n} num")
+
