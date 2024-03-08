@@ -22,4 +22,4 @@ def convert_cel_to_far(temp_cel):
     temp_far = temp_cel *(9 / 5) + 32
     return temp_far
     
-
+print(convert_cel_to_far(5))
