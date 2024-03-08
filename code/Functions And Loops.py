@@ -23,3 +23,11 @@ def convert_cel_to_far(temp_cel):
     return temp_far
     
 print(convert_cel_to_far(5))
+
+def convert_far_to_cel(temp_far):
+    """Return the Celsius temperature temp_cel converted to Fahrenheit."""
+    temp_cel = temp_far - 32 *(5 / 9)
+    return temp_cel
+
+print(convert_far_to_cel(20))
+
