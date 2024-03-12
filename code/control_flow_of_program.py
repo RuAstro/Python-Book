@@ -7,3 +7,14 @@ elif len(my_input) > 5:
 
 else:
     print("Your input is 5 characters long")
+    
+    
+    
+print("I'm thinking of a number between 1 and 10. Guess which one. ")
+my_geuss = input("What number are you Geussing? ")
+
+if my_geuss == "3":
+    print("you win!")
+    
+else:
+    print("you lose.")
