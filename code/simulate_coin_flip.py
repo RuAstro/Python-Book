@@ -3,7 +3,7 @@ import random
 
 def coin_flip():
     """Randomly returns 'heads' and 'tails'. """
-    if random.radiant(0, 1) == 0:
+    if random.randint(0, 1) == 0:
         return "heads"
     else:
         return "tails"
