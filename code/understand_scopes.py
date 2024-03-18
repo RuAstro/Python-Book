@@ -10,7 +10,7 @@
 
 
 
-
+#used the LEGB rule.
 total = 0
 
 def add_to_total(n):

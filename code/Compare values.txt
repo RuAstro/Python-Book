@@ -1,0 +1,6 @@
+• 1 <= 1     	false
+• 1 != 1	false
+• 1 != 2	true
+• "good" != "bad"	true
+• "good" != "Good"	true
+• 123 == "123"		true
