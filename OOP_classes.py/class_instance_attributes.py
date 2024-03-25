@@ -15,3 +15,6 @@ class Dog:
     
     miles.name
     miles.age
+    
+    buddy.species
+    miles.species
