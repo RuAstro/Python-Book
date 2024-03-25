@@ -9,3 +9,9 @@ class Dog:
         
     buddy = Dog("Buddy", 9)
     miles = Dog("Miles", 4)
+    
+    buddy.name
+    buddy.age
+    
+    miles.name
+    miles.age
