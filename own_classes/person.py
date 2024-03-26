@@ -10,3 +10,5 @@ class Person:
         
     user = Person("RJ", "VH", 19, 1.78, 90)
     
+    print(f"The user details: {user}.")
+    
