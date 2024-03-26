@@ -13,11 +13,17 @@ class Dog:
     def speak(self, sound):
         return f"{self.name} says {sound}"
     
+    
+    
+    
     class JackRusselTerrier(Dog):
-        pass
+        def speak(self, sound = "Arf"):
+            return f"{self.name} says {sound}"
     
     class Dachshunds(Dog):
-        pass
-    
+        def speak(self, sound = "Grrr"):
+            return f"{self.name} says {sound}"
+            
     class Bulldog(Dog):
-        pass
+        def speak(self, sound = "Woof"):
+            return f"{self.name} says {sound}"
