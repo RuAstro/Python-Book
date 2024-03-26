@@ -7,3 +7,6 @@ class Person:
         self.age = age
         self.height = height
         self.weight = weight
+        
+    user = Person("RJ", "VH", 19, 1.78, 90)
+    
