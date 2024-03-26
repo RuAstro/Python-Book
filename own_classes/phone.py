@@ -13,4 +13,7 @@ class Phone:
         
     def Notification(self):
         print("Ting...")
+        
+    def Music(Self):
+        print("Lalala")
     
