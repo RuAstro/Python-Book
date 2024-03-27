@@ -26,3 +26,5 @@ print(f"The user details: {user1}.")
     
 user1.BMI()
 user2.BMI()
+
+print()
