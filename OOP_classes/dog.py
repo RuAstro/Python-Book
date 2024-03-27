@@ -14,4 +14,13 @@ class Dog:
 class GoldenRetriever:
     def speak(self, sound = "Bark"):
         return f"Your dog says {sound}"
+    
+    
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+        
+        return length * width
+    
         
