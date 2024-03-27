@@ -28,10 +28,10 @@ class Square:
         self.side_length = side_length
         
 square = Square(4)
-print(square.area)
+print(square.area())
 
 square.width = square.width(5)
-print(square.width)
+print(square.width())
     
     
     
