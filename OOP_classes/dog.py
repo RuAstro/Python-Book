@@ -10,3 +10,8 @@ class Dog:
     
     def speak(self, sound):
         return f"{self.name} says {sound}"
+    
+class GoldenRetriever:
+    def speak(self, sound = "Bark"):
+        return f"Your dog says {sound}"
+        
