@@ -8,8 +8,9 @@ class Person:
         self.height = height
         self.weight = weight
         
-    def walk(self):
-        print("Walking...")
+    def BMI(self):
+        bmi = self.weight // (self.height*self.height)
+        print(f"BMI for {self.name} is {bmi}")
         
     def run(self):
         print("Running...")
@@ -17,7 +18,11 @@ class Person:
     def coral(self):
         print("carolling...")
         
-    user = ("RJ", "VH", 19, 1.78, 90)
+        
+user1 = Person("RJ", "VH", 19, 1.78, 90)
+user2 = Person("JC", "Jardim", 41 ,1.88, 98 )
     
-    print(f"The user details: {user}.")
+print(f"The user details: {user1}.")
     
+user1.BMI()
+user2.BMI()
