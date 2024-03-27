@@ -27,10 +27,11 @@ class Square:
     def __init__(self, side_length):
         self.side_length = side_length
         
-    Square = 4
-    
-    Square
-    
+square = Square(4)
+print(square.area)
+
+square.width = square.width(5)
+print(square.width)
     
     
     
