@@ -10,7 +10,7 @@ class Animal:
     def eating(self, food):
         return f"{self.name} only eats {food}."
     
-    def sleeping(self):
+    def sleeping(self, sleep):
         pass
     
     def speak(self, sound):
