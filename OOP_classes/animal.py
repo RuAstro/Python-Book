@@ -32,29 +32,39 @@ class Pig(Animal):
 class Monkey(Animal):
     def speak(self, sound = "Ahhh haaa"):
         return super().speak(sound)
+    
+    def walking(self, walk = "10"):
+        return super().walking(walk)
 
 
 class Donkey(Animal):
     def speak(self, sound = "Ihhh brrr"):
         return super().speak(sound)
+    
+    def walking(self, walk):
+        return super().walking(walk)
         
         
 #instance speak...
 babe = Pig("Babe", "male")
 print(babe.speak())
-
-flow = Monkey("Flow", "female")
-print(flow.speak())
-
-lady = Donkey("Lady", "female")
-print(lady.speak())
-
-#instance walk...
-babe = Pig("Babe", "male")
 print(babe.walking())
 
 flow = Monkey("Flow", "female")
+print(flow.speak())
 print(flow.walking())
 
+
 lady = Donkey("Lady", "female")
+print(lady.speak())
 print(lady.walking())
+
+#instance walk...
+# babe = Pig("Babe", "male")
+# print(babe.walking())
+
+# flow = Monkey("Flow", "female")
+# print(flow.walking())
+
+# lady = Donkey("Lady", "female")
+# print(lady.walking())
