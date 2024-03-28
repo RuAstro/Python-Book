@@ -24,6 +24,9 @@ class Animal:
 class Pig(Animal):
     def speak(self, sound = "Gggg Gggg"):
         return super().speak(sound)
+    
+    def walking(self, walk):
+        return super().walking(walk)
 
 
 class Monkey(Animal):
