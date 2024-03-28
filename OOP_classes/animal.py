@@ -44,3 +44,4 @@ flow = Monkey("Flow", "female")
 print(flow.speak())
 
 lady = Donkey("Lady", "female")
+print(lady.speak())
