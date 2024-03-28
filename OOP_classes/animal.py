@@ -52,3 +52,9 @@ print(lady.speak())
 #instance walk...
 babe = Pig("Babe", "male")
 print(babe.walking())
+
+flow = Monkey("Flow", "female")
+print(flow.walking())
+
+lady = Donkey("Lady", "female")
+print(lady.walking())
