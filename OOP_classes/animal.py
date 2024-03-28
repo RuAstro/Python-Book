@@ -55,13 +55,16 @@ class Donkey(Animal):
 babe = Pig("Babe", "male")
 print(babe.speak())
 print(babe.walking())
+print(babe.eating())
 
 flow = Monkey("Flow", "female")
 print(flow.speak())
 print(flow.walking())
+print(flow.eating())
 
 
 lady = Donkey("Lady", "female")
 print(lady.speak())
 print(lady.walking())
+print(flow.eating())
 
