@@ -6,16 +6,17 @@ class Animal:
         
     
 class Pig:
-    pass
-
+    def speak(self, sound = "Gggg Gggg"):
+        return super.speak(sound)
 
 
 class Monkey:
-    pass
-
+    def speak(self, sound = "Ahhh haaa"):
+        return super.speak(sound)
 
 
 
 class Donkey:
-    pass
+    def speak(self, sound = "Ihhh brrr"):
+        return super.speak(sound)
         
