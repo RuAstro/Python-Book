@@ -2,10 +2,10 @@ class Animal:
     
     def __init__(self, name, sex):
         self.name = name
-        self.sexual_type = sex
+        self.sex = sex
         
     def walking(self):          #instance method!
-        return f"{self.name} is a {self.sexual_type} and is walking alone..."
+        return f"{self.name} is a {self.sex} and is walking alone..."
     
     def running(self):
         pass
@@ -17,7 +17,7 @@ class Animal:
         pass
     
     def speak(self, sound):
-        return f"The sound of the {self.name} makes {sound}. "
+        return f"{self.name} is a {self.sex}, and makes a {sound} sound."
         
             
     
@@ -39,3 +39,8 @@ class Donkey(Animal):
 #instance     
 babe = Pig("Babe", "male")
 print(babe.speak())
+
+flow = Monkey("Flow", "female")
+print(flow.speak())
+
+lady = Donkey("Lady", "female")
