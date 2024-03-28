@@ -7,9 +7,6 @@ class Animal:
     def walking(self, walk):          #instance method!
         return f"{self.name} is a {self.sex} and is walking {walk} km/h. "
     
-    def running(self):
-        pass
-    
     def eating(self):
         pass
     
@@ -25,7 +22,7 @@ class Pig(Animal):
     def speak(self, sound = "Gggg Gggg"):
         return super().speak(sound)
     
-    def walking(self, walk = "5"):
+    def walking(self, walk = "1"):
         return super().walking(walk)
 
 
@@ -33,7 +30,7 @@ class Monkey(Animal):
     def speak(self, sound = "Ahhh haaa"):
         return super().speak(sound)
     
-    def walking(self, walk = "10"):
+    def walking(self, walk = "4"):
         return super().walking(walk)
 
 
@@ -41,11 +38,11 @@ class Donkey(Animal):
     def speak(self, sound = "Ihhh brrr"):
         return super().speak(sound)
     
-    def walking(self, walk):
+    def walking(self, walk = "2"):
         return super().walking(walk)
         
         
-#instance speak...
+#instance speak...walk...
 babe = Pig("Babe", "male")
 print(babe.speak())
 print(babe.walking())
@@ -59,12 +56,3 @@ lady = Donkey("Lady", "female")
 print(lady.speak())
 print(lady.walking())
 
-#instance walk...
-# babe = Pig("Babe", "male")
-# print(babe.walking())
-
-# flow = Monkey("Flow", "female")
-# print(flow.walking())
-
-# lady = Donkey("Lady", "female")
-# print(lady.walking())
