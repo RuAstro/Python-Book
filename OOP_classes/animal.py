@@ -7,8 +7,8 @@ class Animal:
     def walking(self, walk):          #instance method!
         return f"{self.name} is a {self.sex} and is walking {walk} km/h. "
     
-    def eating(self):
-        pass
+    def eating(self, food):
+        return f"{self.name} only eats {food}."
     
     def sleeping(self):
         pass
@@ -24,6 +24,9 @@ class Pig(Animal):
     
     def walking(self, walk = "1"):
         return super().walking(walk)
+    
+    def eating(self, food = "Biltong"):
+        return super().eating(food)
 
 
 class Monkey(Animal):
@@ -32,6 +35,9 @@ class Monkey(Animal):
     
     def walking(self, walk = "4"):
         return super().walking(walk)
+    
+    def eating(self, food = "Banana"):
+        return super().eating(food)
 
 
 class Donkey(Animal):
@@ -40,6 +46,9 @@ class Donkey(Animal):
     
     def walking(self, walk = "2"):
         return super().walking(walk)
+    
+    def eating(self, food = "Appels"):
+        return super().eating(food)
         
         
 #instance speak...walk...
