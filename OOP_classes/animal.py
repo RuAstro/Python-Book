@@ -4,3 +4,18 @@ class Animal:
         self.name = name
         self.sexual_type = sexual_type
         
+    
+class Pig:
+    pass
+
+
+
+class Monkey:
+    pass
+
+
+
+
+class Donkey:
+    pass
+        
