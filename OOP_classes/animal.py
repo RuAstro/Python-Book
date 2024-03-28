@@ -10,8 +10,8 @@ class Animal:
     def eating(self, food):
         return f"{self.name} only eats {food}."
     
-    def sleeping(self, sleep):
-        pass
+    def sleeping(self, hours):
+        return f"{self.name} sleeps about {hours} hours per day!"
     
     def speak(self, sound):
         return f"{self.name} is a {self.sex}, and makes a {sound} sound."
@@ -27,6 +27,9 @@ class Pig(Animal):
     
     def eating(self, food = "Biltong"):
         return super().eating(food)
+    
+    def sleeping(self, hours = "8"):
+        return super().sleeping(hours)
 
 
 class Monkey(Animal):
@@ -38,6 +41,9 @@ class Monkey(Animal):
     
     def eating(self, food = "Banana"):
         return super().eating(food)
+    
+    def sleeping(self, hours = "6"):
+        return super().sleeping(hours)
 
 
 class Donkey(Animal):
@@ -49,6 +55,9 @@ class Donkey(Animal):
     
     def eating(self, food = "Appels"):
         return super().eating(food)
+    
+    def sleeping(self, hours = "10"):
+        return super().sleeping(hours)
         
         
 #instance speak...walk...
