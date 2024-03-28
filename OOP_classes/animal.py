@@ -1,8 +1,8 @@
 class Animal:
     
-    def __init__(self, name, sexual_type):
+    def __init__(self, name, sex):
         self.name = name
-        self.sexual_type = sexual_type
+        self.sexual_type = sex
         
     def walking(self):          #instance method!
         return f"{self.name} is a {self.sexual_type} and is walking alone..."
@@ -15,6 +15,10 @@ class Animal:
     
     def sleeping(self):
         pass
+    
+    def speak(self, sound):
+        return f"The sound of the {self.name} makes {sound}. "
+        
             
     
 class Pig(Animal):
@@ -31,3 +35,7 @@ class Donkey(Animal):
     def speak(self, sound = "Ihhh brrr"):
         return super().speak(sound)
         
+        
+#instance     
+babe = Pig("Babe", "male")
+print(babe.speak())
