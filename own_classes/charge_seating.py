@@ -8,7 +8,10 @@ class Vehicle:
         return self.capacity * 100
         
 class Bus(Vehicle):
-    pass
+    def fare(self):
+        amount = fare()
+        amount = amount * 10 / 100          #amount = total fare + (multiply) 10% of the total fare.
+        return amount
 
 School_bus = Bus("School Volvo", 12, 50)
 print("Total Bus fare is:",School_bus.fare())
