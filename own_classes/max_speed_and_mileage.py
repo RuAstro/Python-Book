@@ -1,4 +1,6 @@
 class Car:
+    color = "white"
+    
     def __init__(self, name, max_speed, mileage):
         self.max_speed = max_speed
         self.mileage = mileage
@@ -18,3 +20,6 @@ class Bus(Car):
 Car_Name = Bus("Volvo", 100, 15)
 print("Car Name: ",Car_Name.name , "Speed: ",Car_Name.max_speed, "Mileage: ",Car_Name.mileage)
 print(Car_Name.seating_capacity())
+
+car = Car("BMW", 240, 18)
+print(car.color, Car_Name, car.max_speed, car.mileage)
