@@ -23,3 +23,7 @@ print("New path:", new_path)
 #get the parent directory
 parent_directory = path.parent
 print("Parent directory:", parent_directory)
+
+#get stem of the path
+stem = path.stem
+print("Stem:", stem)
