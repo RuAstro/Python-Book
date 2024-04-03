@@ -31,3 +31,9 @@ path.write_text("Hello, World!")
 #Listing Directory Contents
 for item in path.iterdir():
     print(item)
+    
+    
+    
+#Joining Paths
+new_path = path / "new_directory" / "new_file.txt"
+print(new_path)
