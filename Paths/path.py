@@ -17,3 +17,5 @@ print(path.stem)
 print(path.exists())
 
 print(path.is_file())
+
+print(path.is_dir())
