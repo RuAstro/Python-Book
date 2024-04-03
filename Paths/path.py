@@ -24,3 +24,5 @@ print(path.is_dir())
 #Reading and writing files
 contents = path.read_text()
 print(contents)
+
+path.write_text("Hello, World!")
