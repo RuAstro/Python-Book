@@ -12,3 +12,8 @@ print(path.suffix)
 
 #name without extension
 print(path.stem)
+
+
+
+
+print(path.exists())
