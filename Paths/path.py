@@ -19,3 +19,8 @@ print(path.exists())
 print(path.is_file())
 
 print(path.is_dir())
+
+
+#Reading and writing files
+contents = path.read_text()
+print(contents)
