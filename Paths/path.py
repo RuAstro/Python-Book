@@ -26,3 +26,8 @@ contents = path.read_text()
 print(contents)
 
 path.write_text("Hello, World!")
+
+
+#Listing Directory Contents
+for item in path.iterdir():
+    print(item)
