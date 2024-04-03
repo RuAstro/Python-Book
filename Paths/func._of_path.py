@@ -13,3 +13,8 @@ print("Is directory:", path.is_dir())
 print("Items in directory:")
 for item in path.iterdir():
     print(item)
+    
+
+#Join paths to create a new path
+new_path = path / "new_directory" / "new_file.txt"
+print("New path:", new_path)
