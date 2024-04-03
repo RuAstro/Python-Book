@@ -37,3 +37,9 @@ for item in path.iterdir():
 #Joining Paths
 new_path = path / "new_directory" / "new_file.txt"
 print(new_path)
+
+
+
+#Resolving Symbolic Links
+resolved_path = path.resolve()
+print(resolved_path)
