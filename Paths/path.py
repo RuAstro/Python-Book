@@ -13,7 +13,7 @@ print(path.suffix)
 #name without extension
 print(path.stem)
 
-
-
-
+#Checking Path Existence and Type
 print(path.exists())
+
+print(path.is_file())
