@@ -27,3 +27,7 @@ print("Parent directory:", parent_directory)
 #get stem of the path
 stem = path.stem
 print("Stem:", stem)
+
+#get file extension
+suffix = path.suffix
+print("Suffix:", suffix)
