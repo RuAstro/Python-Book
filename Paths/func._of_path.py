@@ -18,3 +18,8 @@ for item in path.iterdir():
 #Join paths to create a new path
 new_path = path / "new_directory" / "new_file.txt"
 print("New path:", new_path)
+
+
+#get the parent directory
+parent_directory = path.parent
+print("Parent directory:", parent_directory)
