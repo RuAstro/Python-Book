@@ -55,4 +55,5 @@ for path in paths:
     path.touch()
     
     
-list(new_dir.glob("*.py"))
+#list(new_dir.glob("*.py"))
+list(new_dir.glob("*1*"))
