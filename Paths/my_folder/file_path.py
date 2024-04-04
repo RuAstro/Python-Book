@@ -4,4 +4,4 @@ file_path = Path.home()  #Path.home() class method creates a Path object represe
 
 print(file_path.exists())
 
-print(file_path = "my_folder"/ "my_file.txt")
+pathlib.Path.home().joinpath ("my_folder").joinpath ("my_file.txt")
