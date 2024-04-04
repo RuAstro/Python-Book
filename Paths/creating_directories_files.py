@@ -25,3 +25,4 @@ file_path = new_dir / "file1.txt"
 file_path.touch()
 
 file_path.exists()
+file_path.is_file()
