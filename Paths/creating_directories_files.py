@@ -6,10 +6,16 @@
 from pathlib import Path
 new_dir = Path.home() / "new_directory"
 print(new_dir.exists())
-new_dir.mkdir()
+#new_dir.mkdir()
 
 print(new_dir.exists())
 
 print(new_dir.is_dir())
 
 print(new_dir.mkdir(exist_ok = True))
+
+if not new_dir.exists():
+    new_dir.mkdir()
+    
+nested_dir = new_dir / "folder_a" / "folder_b"
+nested_dir.mkdir(parents = True)
