@@ -5,6 +5,7 @@
 
 from pathlib import Path
 new_dir = Path.home() / "new_directory"
+print(new_dir.exists())
 new_dir.mkdir()
 
 print(new_dir.exists())
