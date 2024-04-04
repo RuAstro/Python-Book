@@ -30,4 +30,4 @@ file_path.is_file()
 
 file_path = new_dir / "folder_c" / "file2.txt"
 file_path.parent.mkdir()
-file_path.touch
+file_path.touch()
