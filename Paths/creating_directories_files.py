@@ -39,3 +39,6 @@ for path in new_dir.iterdir():
 
 for path in new_dir.glob("*.txt"):
     print(path)
+   
+#Convert the returned value of .glob() to a list 
+list(new_dir.glob("*.txt"))
