@@ -10,3 +10,5 @@ new_dir.mkdir()
 print(new_dir.exists())
 
 print(new_dir.is_dir())
+
+print(new_dir.mkdir(exist_ok = True))
