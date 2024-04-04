@@ -18,11 +18,16 @@ if not new_dir.exists():
     new_dir.mkdir()
     
 nested_dir = new_dir / "folder_a" / "folder_b"
-nested_dir.mkdir(parents = True)
+#nested_dir.mkdir(parents = True)
 
 
 file_path = new_dir / "file1.txt"
-file_path.touch()
+file_path.touch("file1.txt")
 
 file_path.exists()
 file_path.is_file()
+
+
+file_path = new_dir / "folder_c" / "file2.txt"
+file_path.parent.mkdir()
+file_path.touch
