@@ -41,7 +41,7 @@ for path in new_dir.glob("*.txt"):
     print(path)
    
 #Convert the returned value of .glob() to a list 
-list(new_dir.glob("*.txt"))
+#list(new_dir.glob("*.txt"))
 
 paths = [
     new_dir / "program1.py",
@@ -53,3 +53,6 @@ paths = [
 
 for path in paths:
     path.touch()
+    
+    
+list(new_dir.glob("*.py"))
