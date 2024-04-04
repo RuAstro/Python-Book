@@ -35,3 +35,7 @@ file_path.touch()
 
 for path in new_dir.iterdir():
     print(path)
+    
+
+for path in new_dir.glob("*.txt"):
+    print(path)
