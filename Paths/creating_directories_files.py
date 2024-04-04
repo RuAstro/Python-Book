@@ -59,3 +59,5 @@ for path in paths:
 #list(new_dir.glob("*1*"))
 #list(new_dir.glob("program?.py"))
 #list(new_dir.glob("?older_?"))
+#list(new_dir.glob("*1.??"))
+list(new_dir.glob("program[13].py"))
