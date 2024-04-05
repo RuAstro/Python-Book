@@ -84,3 +84,5 @@ for path in paths:
 #Delete a file...
 file_path = new_dir / "program1.py"
 file_path.unlink()
+
+file_path.exists()
