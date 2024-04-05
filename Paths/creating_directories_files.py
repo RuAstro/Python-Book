@@ -65,4 +65,11 @@ for path in paths:
 #list(new_dir.glob("**/*.py"))
 
 #most people use this method.
-list(new_dir.rglob("*.py"))
+#list(new_dir.rglob("*.py"))
+
+
+
+#Moving and deleting files and folders.
+source = new_dir / "file1.txt"
+destination = new_dir / " folder_a" / "file1.txt"
+source.replace(destination)
