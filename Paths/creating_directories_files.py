@@ -30,7 +30,7 @@ file_path.is_file()
 
 file_path = new_dir / "folder_c" / "file2.txt"
 #file_path.parent.mkdir()
-file_path.touch()
+#file_path.touch()
 
 
 for path in new_dir.iterdir():
@@ -76,6 +76,11 @@ for path in paths:
 
 
 #Renames the folder_c...
-source = new_dir / "folder_c"
-destination = new_dir / "folder_d"
-source.replace(destination)
+# source = new_dir / "folder_c"
+# destination = new_dir / "folder_d"
+# source.replace(destination)
+
+
+#Delete a file...
+file_path = new_dir / "program1.py"
+file_path.unlink()
