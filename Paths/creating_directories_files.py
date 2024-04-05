@@ -86,3 +86,6 @@ file_path = new_dir / "program1.py"
 file_path.unlink()
 
 file_path.exists()
+
+#ignore the exception...
+file_path.unlink(missing_ok = True)
