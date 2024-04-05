@@ -70,6 +70,12 @@ for path in paths:
 
 
 #Moving and deleting files and folders.
-source = new_dir / "file1.txt"
-destination = new_dir / " folder_a" / "file1.txt"
+# source = new_dir / "file1.txt"
+# destination = new_dir / " folder_a" / "file1.txt"
+# source.replace(destination)
+
+
+#Renames the folder_c...
+source = new_dir / "folder_c"
+destination = new_dir / "folder_d"
 source.replace(destination)
