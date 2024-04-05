@@ -103,3 +103,7 @@ folder_d.rmdir()
 import shutil
 folder_a = new_dir / "folder_a"
 shutil.rmtree(folder_a)
+
+folder_a.exists()
+
+list(new_dir.rglob("image*.*"))
