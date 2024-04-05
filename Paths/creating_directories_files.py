@@ -98,3 +98,8 @@ for path in folder_d.iterdir():
     path.unlink()
     
 folder_d.rmdir()
+
+#how to use rmtree() to delete folder_a
+import shutil
+folder_a = new_dir / "folder_a"
+shutil.rmtree(folder_a)
