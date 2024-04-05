@@ -76,9 +76,9 @@ for path in paths:
 
 
 #Renames the folder_c...
-source = new_dir / "folder_c"
-destination = new_dir / "folder_d"
-source.replace(destination)
+# source = new_dir / "folder_c"
+# destination = new_dir / "folder_d"
+# source.replace(destination)
 
 
 #Delete a file...
@@ -90,8 +90,11 @@ file_path.exists()
 #ignore the exception...
 file_path.unlink(missing_ok = True)
 
+folder_d = new_dir / "folder_d"
+#folder_d.rmdir()
+
 #for deleting a folder, you should first delete all files inside that folder
 for path in folder_d.iterdir():
     path.unlink()
     
-    folder_d.rmdir()
+folder_d.rmdir()
