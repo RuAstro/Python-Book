@@ -15,3 +15,6 @@ image1.touch()
 folder_images = new_dir / "images"
 #folder_images.mkdir()
 image1.replace(folder_images / "image1.png")
+
+file_path = new_dir / "file1.txt"
+file_path.unlink()
