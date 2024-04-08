@@ -18,3 +18,7 @@ image1.replace(folder_images / "image1.png")
 
 file_path = new_dir / "file1.txt"
 file_path.unlink()
+
+import shutil
+my_folder = new_dir / "my_folder"
+shutil.rmtree(my_folder)
