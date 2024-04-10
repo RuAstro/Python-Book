@@ -25,3 +25,18 @@ for row in reader:
     print(row)
     
 file.close()
+
+
+
+daily_temperatures = []
+
+with file_path.open(mode = "r", encoding = "utf-8", newline="") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        #Convert row to list of integers
+        int_row = [int(value) for value in row]
+        
+        # Append the list of integers to daily_temperatures list
+        daily_temperatures.append(int_row)
+        
+daily_temperatures
