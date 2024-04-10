@@ -13,3 +13,6 @@ with file_path.open(mode = "r", encoding = "utf-8")as file:
     text = file.read()
     
 text
+    
+temperatures = text.split(",")
+temperatures
