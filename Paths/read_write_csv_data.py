@@ -16,3 +16,6 @@ text
     
 temperatures = text.split(",")
 temperatures
+
+int_temperatures = [int(temp) for temp in temperatures]
+int_temperatures
