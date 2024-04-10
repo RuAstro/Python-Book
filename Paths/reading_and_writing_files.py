@@ -10,3 +10,9 @@ with file_path.open(mode = "w", encoding = "utf-8")as file:
 with file_path.open(mode = "r", encoding = "utf-8") as file:
     for starship in file.readlines():
         print(starship, end="")
+        
+
+with file_path.open(mode = "r", encoding = "utf-8") as file:
+    for starships in file.readlines():
+        if starship.startswith("D"):
+            print(starships, end="")
