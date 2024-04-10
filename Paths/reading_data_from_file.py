@@ -38,3 +38,8 @@ lines_of_text = [
 
 with path.open(mode = "w", encoding = "utf-8") as file:
     file.writelines(lines_of_text)
+    
+#Python will create the file as long as all the parent folders in the path exist:
+path = Path.home() / "new_file"
+with path.open(mode = "w", encoding = "utf-8") as file:
+    file.write("hello!")
