@@ -16,3 +16,4 @@ writer = csv.writer(file)
 for temp_list in daily_temperatures:
     writer.writerow(temp_list)
 
+file.close()
