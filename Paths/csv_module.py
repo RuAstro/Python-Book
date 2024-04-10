@@ -16,4 +16,10 @@ writer = csv.writer(file)
 for temp_list in daily_temperatures:
     writer.writerow(temp_list)
 
-file.close()
+#file.close()
+
+file = file_path.open(mode = "r", encoding = "utf-8", newline="")
+reader = csv.reader(file)
+
+for row in reader:
+    print(row)
