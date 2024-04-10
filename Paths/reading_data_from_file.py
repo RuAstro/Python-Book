@@ -43,3 +43,7 @@ with path.open(mode = "w", encoding = "utf-8") as file:
 path = Path.home() / "new_file"
 with path.open(mode = "w", encoding = "utf-8") as file:
     file.write("hello!")
+    
+path.parent.mkdir(parents = True)
+with path.open(mode = "w", encoding = "utf-8") as file:
+    file.write("Hello!")
