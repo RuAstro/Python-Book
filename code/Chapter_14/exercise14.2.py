@@ -19,7 +19,13 @@ reader = PdfReader("zen.pdf")
 with open ("Pride_and_Prejudice.pdf", "rb") as file:
     reader = PdfReader(file)
     writer = PdfWriter()
-    
+#herhaal through each page
+for page_index in range(reader.numPages):
+    #check if page index is even
+    if page_index % 2 == 0:
+        #Add page to the writer
+        writer.addPage(reader.getPage(page_index))
+          
 
 
 first_half_writer = PdfWriter
