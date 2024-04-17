@@ -7,7 +7,7 @@ Pdf_reader = PdfReader(str(pdf))
 
 last_page = Pdf_reader.reader[-1]
 
-pdf_writer = pdf_writer()
+pdf_writer = PdfWriter()
 pdf_writer.addPage()
 
 output_path = Path.home() / "last_page.pdf"
@@ -15,6 +15,11 @@ with output_path.open(mode="wb") as output_file:
     pdf_writer.write(output_file)
     
 #need to do number 2
+reader = PdfReader("zen.pdf")
+with open ("Pride_and_Prejudice.pdf", "rb") as file:
+    reader = PdfReader(file)
+    writer = PdfWriter()
+    
 
 
 first_half_writer = PdfWriter
