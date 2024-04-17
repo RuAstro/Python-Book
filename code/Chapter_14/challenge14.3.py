@@ -30,7 +30,10 @@ class PdfFileSplitter:
     
     #takes 2 parameters for split between PDFs
     #self.pfd1 and 2 is to separate files using write method            
-    def write(self, filename_1, filename_2):
+    def write(self, filename_1, filename_2, filename):
+        filename_1 = filename + "_1.pdf"
+        filename_2 = filename + "_2.pdf"
+        
         with open(filename_1, "wb") as output_file_1:
             self.pdf1.write(output_file_1)
             
