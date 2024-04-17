@@ -16,18 +16,25 @@ with output_path.open(mode="wb") as output_file:
     
 #need to do number 2
 reader = PdfReader("zen.pdf")
+
 with open ("Pride_and_Prejudice.pdf", "rb") as file:
     reader = PdfReader(file)
     writer = PdfWriter()
+    
 #herhaal through each page
 for page_index in range(reader.numPages):
+    
     #check if page index is even
     if page_index % 2 == 0:
+        
         #Add page to the writer
         writer.addPage(reader.getPage(page_index))
-          
-
-
+        
+#write even number pages to new pdf.        
+with open("every_other_page.pdf", "wb") as output_file:
+    writer.write(output_file)
+    
+      
 first_half_writer = PdfWriter
 second_half_writer = PdfWriter
 
@@ -48,3 +55,5 @@ with first_half_output_path.open(mode="wb") as output_file:
 second_half_output_path = Path.home() / "second_half.pdf"
 with second_half_output_path.open(mode="wb") as output_file:
     second_half_writer.write(second_half_output_path)
+
+print("Complete")
