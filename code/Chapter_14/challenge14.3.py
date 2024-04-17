@@ -1,13 +1,26 @@
 from PyPDF2 import PdfReader, PdfWriter
 from pathlib import Path
+import PyPDF2
 
 class PdfFileSplitter:
     def __init__(self, path):
         self.path = path       
-        self.reader = PyPDF2.PdfReader(open(path, "rb"))
+        self.reader = PdfReader(open(path, "rb"))
         self.num_pages = self.reader.numPages
         
     def split(self, breakpoint):
         if breakpoint <= 0 or breakpoint >= self.num_pages:
             print("Invalid")
-            return None    
+            return None   
+    
+        #for write to split PDFs
+        self.pdf1 = PdfWriter()
+        self.pdf2 = PdfWriter()
+        
+        for page_num in range(self.num_pages):
+            if page_num < breakpoint:
+                self.pdf1.addPage(self.reader.getPage(page_num))
+                
+            else:
+                self.pdf2.addPage(self.reader.getPage(page_num))
+        
