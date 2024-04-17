@@ -17,6 +17,9 @@ class PdfFileSplitter:
         self.pdf1 = PdfWriter()
         self.pdf2 = PdfWriter()
         
+        #loop through each page of pdf
+        #if current num page is less than breakpoint, page added to self.pdf1
+        #other then that we add it to self.pdf2
         for page_num in range(self.num_pages):
             if page_num < breakpoint:
                 self.pdf1.addPage(self.reader.getPage(page_num))
