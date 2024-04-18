@@ -67,12 +67,15 @@ print(babe.walking())
 print(babe.eating())
 print(babe.sleeping())
 
+print("**************************************************")
+
 flow = Monkey("Flow", "female")
 print(flow.speak())
 print(flow.walking())
 print(flow.eating())
 print(flow.sleeping())
 
+print("**************************************************")
 
 lady = Donkey("Lady", "female")
 print(lady.speak())

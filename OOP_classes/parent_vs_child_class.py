@@ -16,8 +16,8 @@ class Dog:
     
     
     
-    class JackRusselTerrier(Dog):
-        def speak(self, sound = "Arf"):
+class JackRusselTerrier(Dog):
+    def speak(self, sound = "Arf"):
             return f"{self.name} says {sound}"
     
     class Dachshunds(Dog):

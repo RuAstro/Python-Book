@@ -19,3 +19,6 @@ for row in reader:
     
     
 file.close()
+
+def process_row(row):
+    row["sal"]

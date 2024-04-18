@@ -1,5 +1,3 @@
-
-
 class Bottle:
 
     def __init__(self, volume, type, label ):
@@ -7,11 +5,11 @@ class Bottle:
         self.type = type
         self.label = label
         
-        def pour(self):
-            print("Pouring...")
+        def pouring(self, pour):
+            return f"You are {pour} water in a "
             
-        def fill(self):
+        def filling(self, fill):
             print("Filling...")
             
-        def recycle(self):
+        def recycle(self, recycle):
             print("Recycling")

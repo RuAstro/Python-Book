@@ -19,8 +19,8 @@ class Person:
         print("carolling...")
         
         
-user1 = Person("RJ", "VH", 19, 1.78, 90)
-user2 = Person("JC", "Jardim", 41 ,1.88, 98 )
+user1 = Person("Piet", "Snow", 42, 1.78, 105)
+user2 = Person("Joe", "Handy", 41 ,1.88, 98 )
     
 print(f"The user details: {user1}.")
     
