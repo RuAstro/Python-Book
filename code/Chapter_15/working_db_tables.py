@@ -1,4 +1,5 @@
 import sqlite3
+from pathlib import Path
 
 # CREATE TABLE People(FirstName TEXT, LastName TEXT, Age INT)
 # INSERT INTO People VALUES('Ron', 'Obvious', 42)
@@ -13,17 +14,19 @@ CREATE TABLE People(
 insert_values = """
 INSERT INTO People VALUES(
     'Ron',
-    'Obvious'
+    'Obvious',
     42
 );"""
 
-connection = sqlite3.connect("test_database.db")
-cursor = connection.cursor()
-cursor.execute(create_table)
-cursor.execute(insert_values)
+print(Path.cwd())
 
-connection.commit()
-connection.close()
+# connection = sqlite3.connect("test_database.db")
+# cursor = connection.cursor()
+# cursor.execute(create_table)
+# cursor.execute(insert_values)
+
+# connection.commit()
+# connection.close()
 
 
 with sqlite3.connect("test_database.db") as connection:
