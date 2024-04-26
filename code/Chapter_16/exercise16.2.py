@@ -1,4 +1,4 @@
-from urllib.request import urlopen
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 import requests
 
@@ -12,13 +12,13 @@ links = []
 for link in soup.find_all("a"):
     href = link.get("href")
     if href:  # to check if "href" attribute exists
-        links.append(href)
+        links.append(urljoin(url, href))
 
 for link in links:
     # Get the URL of the page
-    full_url = urlopen(url, link)
+    # full_url = urljoin(url, link)
     # Send a GET request to the page URL
-    page_response = requests.get(full_url)
+    page_response = requests.get(link)
     # Parse the HTML content of the page
     page_soup = BeautifulSoup(page_response.text, "html.parser")
     # Get the text of the page without HTML tags
