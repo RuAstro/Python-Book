@@ -11,4 +11,13 @@ match_results = re.search(pattern, html, re.IGNORECASE)
 title = match_results.group()
 title = re.sub("<.*?>", "", title)
 
+image1, image2 = soup.find_all("img")
+image1["src"]
+# /static/dionysus.jpg'
+image2["src"]
+# /static/grapes.png'
+
+soup.title.string
+# Profile: Dionysus
+
 print(title)
