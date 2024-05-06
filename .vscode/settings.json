@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "mypackage"
-    ]
+    ],
+    "python.analysis.autoImportCompletions": true
 }
