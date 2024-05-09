@@ -28,6 +28,12 @@ entry7 = tk.Entry()
 label8 = tk.Label(text="Country : ")
 entry8 = tk.Entry()
 
+button1 = tk.Button(text="Clear")
+button1.grid(row=9, column=1, sticky="E", padx=7)
+
+button2 = tk.Button(text="Submit")
+button2.grid(row=9, column=2, sticky="S")
+
 
 label1.grid(row=0, column=0, sticky="E")
 entry1.grid(row=0, column=1, sticky="W")
