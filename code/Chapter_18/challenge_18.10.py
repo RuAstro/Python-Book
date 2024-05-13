@@ -3,6 +3,10 @@ import random
 from tkinter import filedialog
 
 
+def check_unique_words(words):
+    return len(words) == len(set(words))
+
+
 def generate_poetry():
     nouns = nouns_entry.get().split()
     verbs = verbs_entry.get().split()
@@ -10,19 +14,34 @@ def generate_poetry():
     prepositions = prepositions_entry.get().split()
     adverbs = adverbs_entry.get().split()
 
-    if (
+    if not check_unique_words(nouns):
+        display_error("Duplicate nouns found!")
+    elif not check_unique_words(verbs):
+        display_error("Duplicate verbs found!")
+    elif not check_unique_words(adjectives):
+        display_error("Duplicate adjectives found!")
+    elif not check_unique_words(prepositions):
+        display_error("Duplicate prepositions found!")
+    elif not check_unique_words(adverbs):
+        display_error("Duplicate adverbs found!")
+
+    elif (
         len(nouns) < 3
         or len(verbs) < 3
         or len(adjectives) < 3
         or len(prepositions) < 3
         or len(adverbs) < 1
     ):
-        poetry_text.delete(1.0, tk.END)
-        poetry_text.insert(tk.END, "Error: Not enough words entered.")
+        display_error("Not enough words entered!")
     else:
         poem = generate_poem(nouns, verbs, adjectives, prepositions, adverbs)
         poetry_text.delete(1.0, tk.END)
         poetry_text.insert(tk.END, poem)
+
+
+def display_error(message):
+    poetry_text.delete(1.0, tk.END)
+    poetry_text.insert(tk.END, message)
 
 
 def generate_poem(nouns, verbs, adjectives, prepositions, adverbs):
@@ -91,7 +110,10 @@ poetry_label.grid(row=6, column=0, sticky="E")
 
 poetry_text = tk.Text(window, width=40, height=10)
 poetry_text.grid(
-    row=7, column=0, columnspan=10
-)  # The columnspan attribute in Tkinter specifies how many columns a widget should span. It's used when you want a widget to cover multiple columns in a grid layout.
-
+    row=7,
+    column=0,
+    columnspan=10,
+    # The columnspan attribute in Tkinter specifies how many columns a widget should span.
+    # It's used when you want a widget to cover multiple columns in a grid layout.
+)
 window.mainloop()
