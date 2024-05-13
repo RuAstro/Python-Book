@@ -44,6 +44,15 @@ def display_error(message):
     poetry_text.insert(tk.END, message)
 
 
+def reset_words():
+    nouns_entry.delete(0, tk.END)
+    verbs_entry.delete(0, tk.END)
+    adjectives_entry.delete(0, tk.END)
+    prepositions_entry.delete(0, tk.END)
+    adverbs_entry.delete(0, tk.END)
+    poetry_text.delete(1.0, tk.END)
+
+
 def generate_poem(nouns, verbs, adjectives, prepositions, adverbs):
     adjective1, adjective2, adjective3 = random.sample(adjectives, 3)
     noun1, noun2, noun3 = random.sample(nouns, 3)
@@ -102,15 +111,18 @@ adverbs_entry.grid(row=4, column=1)
 generate_button = tk.Button(window, text="Generate Poetry", command=generate_poetry)
 generate_button.grid(row=5, column=1)
 
-export_button = tk.Button(window, text="Export to file", command=export_poem)
+export_button = tk.Button(window, text="Export to file...", command=export_poem)
 export_button.grid(row=5, column=2)
 
+reset_button = tk.Button(window, text="Reset Words", command=reset_words)
+reset_button.grid(row=6, column=1)
+
 poetry_label = tk.Label(window, text="Generated Poem:")
-poetry_label.grid(row=6, column=0, sticky="E")
+poetry_label.grid(row=7, column=0, sticky="E")
 
 poetry_text = tk.Text(window, width=40, height=10)
 poetry_text.grid(
-    row=7,
+    row=8,
     column=0,
     columnspan=10,
     # The columnspan attribute in Tkinter specifies how many columns a widget should span.
