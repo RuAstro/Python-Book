@@ -3,29 +3,14 @@ import random
 from tkinter import filedialog
 
 
-def check_unique_words(words):
-    return len(words) == len(set(words))
-
-
 def generate_poetry():
-    nouns = nouns_entry.get().split()
-    verbs = verbs_entry.get().split()
-    adjectives = adjectives_entry.get().split()
-    prepositions = prepositions_entry.get().split()
-    adverbs = adverbs_entry.get().split()
+    nouns = set(nouns_entry.get().split())
+    verbs = set(verbs_entry.get().split())
+    adjectives = set(adjectives_entry.get().split())
+    prepositions = set(prepositions_entry.get().split())
+    adverbs = set(adverbs_entry.get().split())
 
-    if not check_unique_words(nouns):
-        display_error("Duplicate nouns found!")
-    elif not check_unique_words(verbs):
-        display_error("Duplicate verbs found!")
-    elif not check_unique_words(adjectives):
-        display_error("Duplicate adjectives found!")
-    elif not check_unique_words(prepositions):
-        display_error("Duplicate prepositions found!")
-    elif not check_unique_words(adverbs):
-        display_error("Duplicate adverbs found!")
-
-    elif (
+    if (
         len(nouns) < 3
         or len(verbs) < 3
         or len(adjectives) < 3
@@ -54,11 +39,11 @@ def reset_words():
 
 
 def generate_poem(nouns, verbs, adjectives, prepositions, adverbs):
-    adjective1, adjective2, adjective3 = random.sample(adjectives, 3)
-    noun1, noun2, noun3 = random.sample(nouns, 3)
-    verb1, verb2, verb3 = random.sample(verbs, 3)
-    prepositions1, prepositions2, prepositions3 = random.sample(prepositions, 3)
-    adverb = random.choice(adverbs)
+    adjective1, adjective2, adjective3 = random.sample(sorted(adjectives), 3)
+    noun1, noun2, noun3 = random.sample(sorted(nouns), 3)
+    verb1, verb2, verb3 = random.sample(sorted(verbs), 3)
+    prepositions1, prepositions2, prepositions3 = random.sample(sorted(prepositions), 3)
+    adverb = random.choice(sorted(adverbs))
 
     poem = (
         f"A {adjective1} {noun1}\n"
