@@ -1,26 +1,13 @@
-def get_cats_with_hats(array_of_cats):
-    cats_with_hats_on = []
-  
-    for num in range(1, 100 + 1):
-       
-        for cat in range(1, 100 + 1):
-        
-            if cat % num == 0:
-               
-                if array_of_cats[cat] is True:
-                    array_of_cats[cat] = False
-                else:
-                    array_of_cats[cat] = True
+cats = [False] * 100  # Initially, no cat has a hat
 
-    
-    for cat in range(1, 100 + 1):
-        if array_of_cats[cat] is True:
-            cats_with_hats_on.append(cat)
+# Iterate through each round
+for round_number in range(1, 101):
+    # Iterate through each cat
+    for cat_number in range(round_number - 1, 100, round_number):
+        # Toggle the hat
+        cats[cat_number] = not cats[cat_number]
 
-    
-    return cats_with_hats_on
-
-
-
-cats = [False] * (100 + 1)
-print(get_cats_with_hats(cats))
+# Print out the cats that have hats
+for i, has_hat in enumerate(cats, start=1):
+    if has_hat:
+        print("Cat", i, "has a hat.")
